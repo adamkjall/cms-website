@@ -10,6 +10,8 @@ const client = createClient({
 
 export async function getIndexPage() {
   const entries = await client.getEntries({ content_type: "indexPage" });
+  const navigationProps = await getNavigation();
+
   if (entries?.items) {
     const indexPage = entries.items[0];
 
@@ -20,13 +22,19 @@ export async function getIndexPage() {
       imageGrid: transformItems(imageGrid),
       header: header,
       posts: transformItems(posts),
+      navigationProps,
     };
   }
 }
 
-export async function getNavigationAndFooter() {
-  const entry = await client.getEntry("2GdzQwUHZE6MJxUTbtIpoU");
-  console.log("entry", entry);
+export async function getNavigation() {
+  const entry = await client.getEntry({ content_type: "navigationMenu" });
+
+  if (entry?.fields) {
+    const navigationProps = entry.fields.navigationElements;
+
+    return navigationProps;
+  }
 }
 
 // helpers

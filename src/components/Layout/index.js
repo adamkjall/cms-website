@@ -3,9 +3,9 @@ import Navbar from "~/components/Navbar";
 
 import styles from "./styles.module.scss";
 
-const Layout = ({ children }) => (
+const Layout = ({ navigationProps, children }) => (
   <div className={styles.layout}>
-    <Navbar />
+    <Navbar navigationProps={navigationProps} />
     {children}
     <Footer />
   </div>

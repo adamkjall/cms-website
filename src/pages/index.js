@@ -6,7 +6,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 import styles from "~/styles/index.module.scss";
 
-const Index = ({ id, imageGrid, header, posts }) => (
+const Index = ({ id, imageGrid, header, posts, navigationProps }) => (
   <>
     <Head>
       <title>Dogbasics - Puppy & dog traning</title>
@@ -15,7 +15,7 @@ const Index = ({ id, imageGrid, header, posts }) => (
 
     <main className={styles.main}>
       <div className={styles.imageGrid}>
-        {imageGrid.map((image, index) => (
+        {imageGrid.slice(0, 1).map((image, index) => (
           <div style={{ position: "relative" }}>
             <Image src={`https:${image.file.url}`} layout="fill" />
           </div>
