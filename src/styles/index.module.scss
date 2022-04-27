@@ -1,0 +1,46 @@
+.main {
+}
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  height: 350px;
+
+  // :nth-child(3) {
+  //   grid-row: span 2;
+  // }
+
+  // @media screen and (max-width: 1200px) {
+  //   height: 300px;
+  //   gap: 0.75rem;
+  // }
+
+  // @media screen and (max-width: 960px) {
+  //   grid-template-columns: 1fr 1fr;
+  //   height: 350px;
+
+  //   :nth-child(3) {
+  //     display: none;
+  //   }
+  // }
+
+  // @media screen and (max-width: 800px) {
+  //   grid-template-columns: 1fr 1fr;
+  //   height: 350px;
+
+  //   :nth-child(3) {
+  //     display: none;
+  //   }
+
+  //   img {
+  //     object-fit: contain;
+  //   }
+  // }
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}

@@ -1,0 +1,17 @@
+.layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  // main page content
+  > :nth-child(2) {
+    padding: 0 1.5rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    flex-grow: 1;
+
+    @media screen and (max-width: 1200px) {
+      max-width: 960px;
+    }
+  }
+}
