@@ -1,10 +1,8 @@
-import Footer from "~/components/Footer";
-import Navbar from "~/components/Navbar";
-
-import styles from "./styles.module.scss";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
 
 const Layout = ({ navigationProps, children }) => (
-  <div className={styles.layout}>
+  <div className="layout">
     <Navbar navigationProps={navigationProps} />
     {children}
     <Footer />

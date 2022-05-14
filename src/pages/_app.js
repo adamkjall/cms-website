@@ -1,6 +1,10 @@
-import Layout from "~/components/Layout";
+import Layout from "../components/Layout";
 
-import "~/styles/globals.css";
+import "../styles/globals.css";
+import "../styles/index.scss";
+import "../styles/layout.scss";
+import "../styles/navbar.scss";
+import "../styles/footer.scss";
 
 function App({ Component, pageProps }) {
   return (
